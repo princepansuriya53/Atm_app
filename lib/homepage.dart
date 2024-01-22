@@ -25,7 +25,7 @@ class _homescreenState extends State<homescreen> {
 
   String lastTransactionDetails = "0";
 
-  List<String> transactionHistory = [];
+  List<String> transaction_history = [];
 
   TextEditingController sbi_amount_controller = TextEditingController();
 
@@ -354,7 +354,7 @@ class _homescreenState extends State<homescreen> {
                   height: MediaQuery.of(context).size.height * .7,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: transactionHistory
+                    children: transaction_history
                         .map((transaction) => Text(
                               transaction,
                               style: const TextStyle(
@@ -390,6 +390,6 @@ class _homescreenState extends State<homescreen> {
 
     String transactionDetails =
         'Rs.${withdrawalAmount.toString().padLeft(13)} ${Money_100.toString().padLeft(13)}, ${Money_200.toString().padLeft(13)}, ${Money_500.toString().padLeft(13)}, ${Money_2000.toString().padLeft(13)}';
-    transactionHistory.add(transactionDetails);
+    transaction_history.add(transactionDetails);
   }
 }

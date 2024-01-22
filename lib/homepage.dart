@@ -164,6 +164,8 @@ class _homescreenState extends State<homescreen> {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                    elevation: 5,
+                    shadowColor: Colors.deepPurpleAccent,
                     backgroundColor: const Color.fromARGB(255, 160, 85, 251),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 150, vertical: 20),
@@ -195,6 +197,7 @@ class _homescreenState extends State<homescreen> {
                 child: const Text(
                   'WITHDRAW',
                   style: TextStyle(color: Colors.white),
+                  textScaleFactor: 1,
                 ),
               ),
             ),

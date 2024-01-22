@@ -373,23 +373,23 @@ class _homescreenState extends State<homescreen> {
     );
   }
 
-  void _withdrawMoney() => setState(() => atmBalance -= withdrawalAmount);
-
   void updateLastTransactionDetails() {
-    int Money_2000 = withdrawalAmount ~/ 2000;
-    int Money_500 = (withdrawalAmount % 2000) ~/ 500;
-    int Money_200 = ((withdrawalAmount % 2000) % 500) ~/ 200;
-    int Money_100 = (((withdrawalAmount % 2000) % 500) % 200) ~/ 100;
+    int money2000 = withdrawalAmount ~/ 2000;
+    int money500 = (withdrawalAmount % 2000) ~/ 500;
+    int money200 = ((withdrawalAmount % 2000) % 500) ~/ 200;
+    int money100 = (((withdrawalAmount % 2000) % 500) % 200) ~/ 100;
 
     lastTransactionDetails =
-        '$withdrawalAmount - $Money_100, $Money_200, $Money_500, $Money_2000';
-    hundred = Money_100;
-    twohundred = Money_200;
-    fivehundred = Money_500;
-    twothusand = Money_2000;
+        '$withdrawalAmount - $money100, $money200, $money500, $money2000';
+    hundred = money100;
+    twohundred = money200;
+    fivehundred = money500;
+    twothusand = money2000;
 
     String transactionDetails =
-        'Rs.${withdrawalAmount.toString().padLeft(13)} ${Money_100.toString().padLeft(13)}, ${Money_200.toString().padLeft(13)}, ${Money_500.toString().padLeft(13)}, ${Money_2000.toString().padLeft(13)}';
+        'Rs.${withdrawalAmount.toString().padLeft(13)} ${money100.toString().padLeft(13)}, ${money200.toString().padLeft(13)}, ${money500.toString().padLeft(13)}, ${money2000.toString().padLeft(13)}';
     transaction_history.add(transactionDetails);
   }
+
+  void _withdrawMoney() => setState(() => atmBalance -= withdrawalAmount);
 }

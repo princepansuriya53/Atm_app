@@ -167,8 +167,6 @@ class _homescreenState extends State<homescreen> {
                     elevation: 5,
                     shadowColor: Colors.deepPurpleAccent,
                     backgroundColor: const Color.fromARGB(255, 160, 85, 251),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 150, vertical: 20),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80))),
                 onPressed: () {
@@ -197,7 +195,7 @@ class _homescreenState extends State<homescreen> {
                 child: const Text(
                   'WITHDRAW',
                   style: TextStyle(color: Colors.white),
-                  textScaler: TextScaler.linear(1),
+                  textScaler: TextScaler.linear(1.5),
                 ),
               ),
             ),

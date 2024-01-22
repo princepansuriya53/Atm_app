@@ -197,7 +197,7 @@ class _homescreenState extends State<homescreen> {
                 child: const Text(
                   'WITHDRAW',
                   style: TextStyle(color: Colors.white),
-                  textScaleFactor: 1,
+                  textScaler: TextScaler.linear(1),
                 ),
               ),
             ),
